@@ -1,0 +1,441 @@
+/* ============================================
+   style.css — Estilos del proyecto Login Demo
+   Fuente: System UI (sin Google Fonts, sin dependencias)
+   ============================================ */
+
+/* --- Variables de color --- */
+:root {
+    --blanco:     #ffffff;
+    --gris-claro: #f5f5f5;
+    --gris-borde: #d0d0d0;
+    --gris-texto: #555555;
+    --negro:      #222222;
+    --azul:       #2563eb;
+    --azul-hover: #1d4ed8;
+    --rojo:       #dc2626;
+    --verde:      #16a34a;
+    --radio:      6px;
+}
+
+/* --- Reset básico --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--gris-claro);
+    color: var(--negro);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ============================================
+   PÁGINA DE LOGIN
+   ============================================ */
+.pagina-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 16px;
+    gap: 32px;
+}
+
+/* Tarjeta del formulario */
+.tarjeta {
+    width: 100%;
+    max-width: 400px;
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    padding: 36px 32px;
+}
+
+.tarjeta-cabecera {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.tarjeta-cabecera .icono {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta-cabecera h1 {
+    font-size: 1.4rem;
+    color: var(--negro);
+}
+
+.tarjeta-cabecera p {
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* Alertas */
+.alerta {
+    padding: 10px 14px;
+    border-radius: var(--radio);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.alerta-error {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: var(--rojo);
+}
+
+.alerta-ok {
+    background: #dcfce7;
+    border: 1px solid #86efac;
+    color: var(--verde);
+}
+
+/* Formulario */
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--gris-texto);
+    margin-bottom: 5px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    font-size: 0.95rem;
+    color: var(--negro);
+    background: var(--blanco);
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.campo input:focus {
+    border-color: var(--azul);
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: var(--radio);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: background 0.15s;
+}
+
+.boton-principal {
+    width: 100%;
+    text-align: center;
+    background: var(--azul);
+    color: var(--blanco);
+    margin-top: 8px;
+}
+
+.boton-principal:hover {
+    background: var(--azul-hover);
+}
+
+.boton-salir {
+    background: transparent;
+    color: var(--rojo);
+    border: 1px solid var(--rojo);
+    font-size: 0.85rem;
+    padding: 6px 14px;
+}
+
+.boton-salir:hover {
+    background: #fee2e2;
+}
+
+/* Caja de usuarios de prueba */
+.caja-ayuda {
+    margin-top: 24px;
+    padding: 14px;
+    background: var(--gris-claro);
+    border: 1px dashed var(--gris-borde);
+    border-radius: var(--radio);
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+}
+
+.caja-ayuda p { margin-bottom: 4px; }
+.caja-ayuda ul { padding-left: 18px; margin: 4px 0; }
+.caja-ayuda li { margin: 2px 0; }
+.caja-ayuda code {
+    background: #e0e7ff;
+    color: var(--azul);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+/* ============================================
+   DIAGRAMA DE FLUJO (debajo del login)
+   ============================================ */
+.diagrama {
+    width: 100%;
+    max-width: 760px;
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.diagrama h2 {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+
+.pasos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paso {
+    background: var(--gris-claro);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    padding: 14px 12px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.paso-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: var(--azul);
+    color: var(--blanco);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.paso p {
+    font-size: 0.8rem;
+    color: var(--gris-texto);
+}
+
+.paso p strong {
+    color: var(--negro);
+}
+
+.flecha {
+    font-size: 1.2rem;
+    color: var(--azul);
+}
+
+/* ============================================
+   NAVBAR (dashboard)
+   ============================================ */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    height: 56px;
+    background: var(--blanco);
+    border-bottom: 1px solid var(--gris-borde);
+}
+
+.nav-marca {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--negro);
+}
+
+.nav-usuario {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.88rem;
+    color: var(--gris-texto);
+}
+
+/* ============================================
+   DASHBOARD
+   ============================================ */
+.pagina-dashboard {
+    background: var(--gris-claro);
+}
+
+.contenido-principal {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 36px 20px 64px;
+}
+
+.bienvenida {
+    margin-bottom: 32px;
+}
+
+.bienvenida h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.bienvenida p {
+    color: var(--gris-texto);
+    margin-top: 4px;
+    font-size: 0.95rem;
+}
+
+.nombre-destacado {
+    color: var(--azul);
+}
+
+/* Cuadrícula de tarjetas */
+.cuadricula {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.bloque {
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    padding: 22px;
+}
+
+.bloque-icono {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.bloque h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--negro);
+}
+
+.bloque p {
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    line-height: 1.65;
+}
+
+/* Tabla de datos del usuario */
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.tabla-datos tr {
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.tabla-datos tr:last-child {
+    border-bottom: none;
+}
+
+.tabla-datos th {
+    text-align: left;
+    padding: 7px 0;
+    color: var(--gris-texto);
+    font-weight: 500;
+    width: 45%;
+}
+
+.tabla-datos td {
+    padding: 7px 0;
+    color: var(--negro);
+}
+
+/* Listas */
+.lista-pasos {
+    padding-left: 18px;
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+}
+
+.lista-pasos li {
+    margin: 5px 0;
+}
+
+.lista-seguridad {
+    list-style: none;
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+}
+
+.lista-seguridad li {
+    margin: 7px 0;
+}
+
+.lista-seguridad strong {
+    color: var(--negro);
+}
+
+/* Ejemplo de hash */
+.ejemplo-hash {
+    margin-top: 12px;
+    background: var(--gris-claro);
+    border-radius: var(--radio);
+    padding: 9px 12px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--gris-texto);
+    word-break: break-all;
+}
+
+code {
+    font-family: monospace;
+    background: #e0e7ff;
+    color: var(--azul);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.88em;
+}
+
+/* Sección de logout */
+.seccion-salida {
+    text-align: center;
+    padding: 28px;
+    border: 1px dashed var(--gris-borde);
+    border-radius: var(--radio);
+    background: var(--blanco);
+}
+
+.seccion-salida p {
+    color: var(--gris-texto);
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 580px) {
+    .pasos { flex-direction: column; }
+    .flecha { transform: rotate(90deg); }
+    .navbar { padding: 0 14px; }
+    .bienvenida h1 { font-size: 1.3rem; }
+    .tarjeta { padding: 24px 18px; }
+}

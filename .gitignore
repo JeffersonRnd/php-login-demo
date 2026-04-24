@@ -1,0 +1,20 @@
+# Dependencias y herramientas
+vendor/
+node_modules/
+.env
+
+# Configuración local (¡nunca subas credenciales reales!)
+includes/config.local.php
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/logs/
