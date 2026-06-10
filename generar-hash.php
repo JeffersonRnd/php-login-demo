@@ -1,4 +1,5 @@
 <?php
+//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓acá se coloca la contraseña por ejemplo esa es "123456"
 $password = "123456";
 $hash = password_hash($password, PASSWORD_DEFAULT);
 
